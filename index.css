@@ -48,6 +48,12 @@ body {
   }
 }
 
+.err-message {
+  font-size: 0.75rem;
+  color: red;
+  margin-left: 20px;
+}
+
 input,
 button {
   font: inherit;
@@ -75,12 +81,13 @@ p {
 }
 
 .email {
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   background-color: var(--dk-grey);
   text-align: center;
 }
 
-::placeholder {
+::placeholder,
+.email {
   color: var(--lt-grey);
 }
 
@@ -221,12 +228,16 @@ button:hover {
     height: 56px;
   }
 
-  ::placeholder {
-    text-align: start;
-    padding-left: 30px;
+  input[type="email"] {
+    padding-left: 25px;
   }
 
-  .email-container {
+  ::placeholder,
+  .email {
+    text-align: start;
+  }
+
+  .email-form {
     width: 430px;
     height: 62px;
     margin-bottom: 2.5em;

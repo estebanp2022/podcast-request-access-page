@@ -55,17 +55,25 @@
               alt="Pocket Casts"
           /></a>
         </div>
-        <div class="email-container">
+        <!-- ------------------------------------------ -->
+
+        <form action="#" method="" class="email-form">
+          <label for="email"></label>
           <input
             class="email"
-            type="text"
-            name=""
-            id=""
+            type="email"
+            id="email"
             placeholder="Email address"
+            aria-label="email address"
+            required
           />
-          <button>Request Access</button>
-        </div>
+          <button class="btn" type="submit">Request Access</button>
+          <span class="err-message"></span>
+        </form>
+
+        <!-- ------------------------------------------- -->
       </div>
+
       <img
         class="pattern"
         src="./starter-code/assets/desktop/bg-pattern-dots.svg"
@@ -84,5 +92,6 @@
         >.
       </p>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>
