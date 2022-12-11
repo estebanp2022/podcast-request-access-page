@@ -22,6 +22,8 @@ function clearMessage() {
 submitBtn.addEventListener("click", function () {
   if (email.validity.typeMismatch) {
     error.textContent = "Oops! Please check your email";
+  } else if (email.value.length === 0) {
+    error.textContent = "Oops! Please add your email";
   } else {
     error.style.color = "#54e6af";
     error.textContent = "Thank you!";
