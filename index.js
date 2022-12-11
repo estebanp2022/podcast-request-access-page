@@ -22,6 +22,9 @@ function clearMessage() {
 submitBtn.addEventListener("click", function () {
   if (email.validity.typeMismatch) {
     error.textContent = "Oops! Please check your email";
+  } else {
+    error.style.color = "#54e6af";
+    error.textContent = "Thank you!";
   }
   form.reset();
   setTimeout(clearMessage, 3000);
