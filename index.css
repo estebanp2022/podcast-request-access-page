@@ -26,8 +26,8 @@ body {
     -45deg,
     #121725 0%,
     #202637 25%,
-    #3f475e 38%,
-    #1b3e30 50%,
+    #2c3141 38%,
+    #143025 50%,
     #1d4a39 75%,
     #2d7559 100%
   );
@@ -100,6 +100,11 @@ button {
   margin: 0 auto;
 }
 
+button:hover {
+  cursor: pointer;
+  background-color: #b3ffe2;
+}
+
 .logo {
   position: absolute;
   z-index: 3;
@@ -108,12 +113,13 @@ button {
 }
 
 .container {
-  width: 375px;
-  height: 667px;
+  min-width: 375px;
+  min-height: 667px;
+  max-width: 375px;
+  max-height: 667px;
   position: relative;
-
   background-image: url(./starter-code/assets/mobile/image-host.jpg);
-
+  background-size: contain;
   background-color: var(--black);
 }
 
@@ -155,6 +161,17 @@ button {
   display: none;
 }
 
+.attribution {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--green);
+}
+
 @media (min-width: 48em) {
   h1 {
     font-size: 3rem;
@@ -168,8 +185,10 @@ button {
     width: 445px;
   }
   .container {
-    width: 768px;
-    height: 1024px;
+    min-width: 768px;
+    min-height: 1024px;
+    max-width: 768px;
+    max-height: 1024px;
     background-image: url(./starter-code/assets/tablet/image-host.jpg);
     background-repeat: no-repeat;
     background-position: top right;
@@ -180,17 +199,20 @@ button {
     margin: 40px;
   }
 
+  .container,
+  .card {
+    border-radius: 15px;
+  }
+
   .card {
     width: 635px;
     height: 509px;
     position: absolute;
-    top: 260px;
+    top: 270px;
     left: 39px;
     text-align: start;
     background-color: var(--black);
-    padding-left: 20px;
-    padding-top: 5.8125em;
-    padding-bottom: 20px;
+    padding: 5.8125em 0 1.25em;
     display: flex;
   }
 
@@ -216,7 +238,7 @@ button {
     width: 162px;
     height: 46px;
     top: 5px;
-    right: 5px;
+    right: 8px;
   }
 
   .podcasts {
@@ -262,20 +284,20 @@ button {
   }
 
   .container {
-    width: 1275px;
-    height: 640px;
+    min-width: 1275px;
+    min-height: 640px;
+    max-width: 1275px;
+    max-height: 640px;
     background-image: url(./starter-code/assets/desktop/image-host.jpg);
     position: relative;
-    border-radius: 15px;
   }
 
   .card {
     position: absolute;
     width: 723px;
     height: 509px;
-    left: 0;
-    top: 131px;
-    border-bottom-left-radius: 15px;
+    left: 40px;
+    top: 91px;
   }
 
   .pattern {
