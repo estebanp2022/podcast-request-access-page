@@ -1,0 +1,78 @@
+:root {
+  --white: #ffffff;
+  --black: #121725;
+  --green: #54e6af;
+  --lt-grey: #c2cbe5;
+  --md-grey: #5a668a;
+  --dk-grey: #2c344b;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  height: 100%;
+  font-family: "Chivo", sans-serif;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+h1 {
+  font-size: 1.6875rem;
+  line-height: 38px;
+}
+
+p {
+  font-size: 0.9375rem;
+  line-height: 25px;
+}
+
+.container {
+  width: 375px;
+  height: 667px;
+}
+
+@media (min-width: 48em) {
+  h1 {
+    font-size: 3rem;
+    line-height: 56px;
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 28px;
+  }
+  .container {
+    width: 768px;
+    height: 1024px;
+  }
+
+  .card {
+    width: 635px;
+    height: 509px;
+  }
+}
+
+@media (min-width: 90em) {
+  h1 {
+    font-size: 3.25rem;
+    line-height: 62px;
+  }
+
+  .container {
+    width: 1275px;
+    height: 640px;
+  }
+
+  .card {
+    width: 723px;
+    height: 509px;
+  }
+} ;
